@@ -54,7 +54,7 @@ with (STATE.parent / '.migration.lock').open('a') as lock:
     fcntl.flock(lock, fcntl.LOCK_UN)
 os.environ['KICKTIPP_OUTPUT_DIR'] = str(STATE)
 # Streamlit may rerun this entry without restarting the Python process.
-for name in ('leanflow','webcore','presentation','weekly_review','matchday_live','football_context','model_info','appearance'):
+for name in ('leanflow','webcore','presentation','weekly_review','matchday_live','football_context','model_info','appearance','sportbet','sports_portal'):
     module = sys.modules.get(name)
     origin = getattr(module, '__file__', None)
     if origin and '.kicktipp-runtime' in Path(origin).parts and Path(origin).parent != RUNTIME:
