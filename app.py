@@ -9,7 +9,7 @@ import sys
 import zipfile
 import fcntl
 
-RELEASE = '2026-11-08-quarter-delta-v1'
+RELEASE = '2026-11-08-mobile-five-minute-v1'
 BASE = Path(__file__).resolve().parent
 ARCHIVE = BASE / 'kicktipp.zip'
 BUILD = hashlib.sha256(ARCHIVE.read_bytes()).hexdigest()[:20]
