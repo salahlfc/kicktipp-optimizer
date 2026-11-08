@@ -9,7 +9,7 @@ import sys
 import zipfile
 import fcntl
 
-RELEASE = '2026-11-08-betting-combos-v1'
+RELEASE = '2026-11-09-mitfiebern-v1'
 BASE = Path(__file__).resolve().parent
 ARCHIVE = BASE / 'kicktipp.zip'
 BUILD = hashlib.sha256(ARCHIVE.read_bytes()).hexdigest()[:20]
@@ -55,7 +55,7 @@ with (STATE.parent / '.migration.lock').open('a') as lock:
     fcntl.flock(lock, fcntl.LOCK_UN)
 os.environ['KICKTIPP_OUTPUT_DIR'] = str(STATE)
 # Streamlit may rerun this entry without restarting the Python process.
-for name in ('leanflow','webcore','presentation','weekly_review','matchday_live','football_context','model_info','appearance','sportbet','sports_portal','betting_optimizer'):
+for name in ('leanflow','webcore','presentation','weekly_review','matchday_live','football_context','model_info','appearance','sportbet','sports_portal','betting_optimizer','mitfiebern'):
     module = sys.modules.get(name)
     origin = getattr(module, '__file__', None)
     if origin and '.kicktipp-runtime' in Path(origin).parts and Path(origin).parent != RUNTIME:
