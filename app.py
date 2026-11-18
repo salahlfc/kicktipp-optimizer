@@ -9,7 +9,7 @@ import sys
 import zipfile
 import fcntl
 
-RELEASE = '2026-11-18-team-context'
+RELEASE = '2026-11-18-team-context-diagnostics'
 BASE = Path(__file__).resolve().parent
 ARCHIVE = BASE / 'kicktipp.zip'
 BUILD = hashlib.sha256(ARCHIVE.read_bytes()).hexdigest()[:20]
