@@ -13,3 +13,8 @@ Im Deep Dive stehen die Auswertungen des gesamten Spieltags und der einzelnen Sp
 ## Cloudbetrieb
 
 Streamlit-Einstieg:app.py, Python3.11, feste Paketversionen in requirements.txt. Das geprüfte Anwendungspaket liegt in kicktipp.zip. Der Einstieg entpackt es und übernimmt bestehende KickTipp-Archive auf demselben Server bei normalen Code-Updates. Das Cloud-Dateisystem ist bei einem Serveraustausch nicht dauerhaft garantiert. Keine Mac-Anbindung und keine neuen Kontorechte.
+
+## Automatischer Teamcheck
+
+Optionaler API-Football Gratisplan über Streamlit Secrets (`API_FOOTBALL_KEY`). Abruf von Bundesliga-Prognosen und Ausfallmeldungen; Startelfen werden im Zeitfenster vor Anpfiff geprüft. Eindeutig zugeordnete 1X2-Providerprognosen fließen mit vorläufig 10 % ein; die App optimiert danach erneut nach 4/2/1. Das ist ein konservativer, noch nicht separat historisch kalibrierter Zusatz und keine Garantie. Bei fehlendem Schlüssel, API-Fehlern oder uneindeutigen Spielen bleibt das Ergebnismodell unverändert. API-Football begrenzt den Gratisplan auf 100 Anfragen täglich.
+
